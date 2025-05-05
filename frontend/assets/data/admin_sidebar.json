@@ -1,0 +1,27 @@
+[
+    {
+      "label": "Home",
+      "icon": "home",
+      "route_name": "admin"
+    },
+    {
+      "label": "Users",
+      "icon": "people",
+      "route_name": "admin-users"
+    },
+    {
+      "label": "Activity Levels",
+      "icon": "directions_run",
+      "route_name": "admin-activity-level"
+    },
+    {
+      "label": "Dietary Preferences",
+      "icon": "local_dining",
+      "route_name": "admin-dietary-preference"
+    },
+    {
+      "label": "Primary Goals",
+      "icon": "flag",
+      "route_name": "admin-primary-goal"
+    }
+  ]

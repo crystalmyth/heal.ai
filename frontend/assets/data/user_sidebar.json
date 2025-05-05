@@ -1,0 +1,27 @@
+[
+    {
+      "label": "Home",
+      "icon": "home",
+      "route_name": "user"
+    },
+    {
+      "label": "Workout",
+      "icon": "fitness_center",
+      "route_name": "user-workout-plan"
+    },
+    {
+      "label": "Diet Plan",
+      "icon": "description",
+      "route_name": "user-diet-plan"
+    },
+    {
+      "label": "Motivation & Advise",
+      "icon": "tips_and_updates",
+      "route_name": "user-motivation-advise"
+    },
+    {
+      "label": "Profile",
+      "icon": "person",
+      "route_name": "user-profile"
+    }
+  ]
