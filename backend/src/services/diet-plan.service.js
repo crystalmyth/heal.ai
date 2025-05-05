@@ -1,5 +1,3 @@
-import ActivityLevel from "../models/activity-level.model.js";
-import DietaryPreference from "../models/dietary-preference.model.js";
 import { useGenAi } from "../utils/genAi.js";
 import { calculateBMI } from "../utils/helpers.js";
 

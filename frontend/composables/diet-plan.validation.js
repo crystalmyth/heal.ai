@@ -18,8 +18,8 @@ export const useDietPlan = () => {
       required: helpers.withMessage('Weight is required', required),
       min: helpers.withMessage('Weight must be at least 10 kg', minValue(10)),
     },
-    primaryGoal: {
-      required: helpers.withMessage('Primary Goal is required', required),
+    activityLevel: {
+      required: helpers.withMessage('Activity Level is required', required),
     },
     dietaryPreference: {
       required: helpers.withMessage('Dietary Preference is required', required),

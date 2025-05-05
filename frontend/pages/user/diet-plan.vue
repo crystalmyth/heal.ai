@@ -11,8 +11,8 @@
             <form-input class="col" label="Height" v-model="user.height_cm" :errors="$v.height_cm.$errors" />
             <form-input class="col" label="Weight" v-model="user.weight_kg" :errors="$v.weight_kg.$errors" />
           </div>
-          <form-select label="Primary Goal" v-model="user.primaryGoal" :options="primary_goals" use-input
-            clearable :errors="$v.primaryGoal.$errors" />
+          <form-select label="Activity Level" v-model="user.activityLevel" :options="activity_levels" use-input
+            clearable :errors="$v.activityLevel.$errors" />
           <form-select label="Dietary Preference" v-model="user.dietaryPreference" :options="dietary_preferences" use-input
             clearable :errors="$v.dietaryPreference.$errors" />
           <form-input label="Dietary Restriction" v-model="user.dietaryRestriction"/>
@@ -31,7 +31,7 @@ await fetchUser();
 
 const isDietPlan = computed(() => usePlanStore().isDietPlan);
 
-const { user, primary_goals, dietary_preferences } = storeToRefs(useUserStore());
+const { user, activity_levels, dietary_preferences } = storeToRefs(useUserStore());
 
 const { $v } = useDietPlan()
 

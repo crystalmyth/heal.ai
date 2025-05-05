@@ -21,7 +21,7 @@ export const usePlanStore = defineStore('plan-store', {
             age: user.age,
             height_cm: user.height_cm,
             weight_kg: user.weight_kg,
-            goal: user.primaryGoal.value
+            goal: user.primaryGoal?.value ? user.primaryGoal.value : user.primaryGoal
           },
           headers: {
             'Authorization': `Bearer ${useAuthStore().token}`
@@ -34,7 +34,7 @@ export const usePlanStore = defineStore('plan-store', {
           message: 'Workout Plan generated successfully'
         })
       } catch (err) {
-        if(err.response.status === 500) {
+        if([400, 500].includes(err.response.status)) {
           this.$notify({
             type: 'negative',
             message: err.data.error
@@ -57,8 +57,8 @@ export const usePlanStore = defineStore('plan-store', {
             age: user.age,
             height_cm: user.height_cm,
             weight_kg: user.weight_kg,
-            activityLevel: user.activityLevel.value,
-            dietaryPreference: user.dietaryPreference.value,
+            activityLevel: user.activityLevel?.value ? user.activityLevel.value : user.activityLevel,
+            dietaryPreference: user.dietaryPreference?.value ? user.dietaryPreference.value : user.dietaryPreference,
             dietaryRestriction: user.dietaryRestriction
           },
           headers: {
@@ -72,7 +72,7 @@ export const usePlanStore = defineStore('plan-store', {
           message: 'Diet Plan generated successfully'
         })
       } catch (err) {
-        if(err.response.status === 500) {
+        if([500, 400].includes(err.status)) {
           this.$notify({
             type: 'negative',
             message: err.data.error
